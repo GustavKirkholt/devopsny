@@ -1,0 +1,24 @@
+import React from "react";
+import {Button} from "@material-ui/core";
+import { Component } from 'react';
+
+
+class Home extends Component {
+render() {
+    return (
+        <div className="Home">
+            <header className="Home-header">
+                <title>Home </title>
+                    <div className="centered">
+                        <h1>Test React Build!</h1>
+                    </div>
+                    <div className="centered">
+                        <Button variant="contained" color="primary" align="center">Knap</Button>
+                    </div>
+                </header>
+            </div>
+        );
+    }
+}
+
+export default Home;
