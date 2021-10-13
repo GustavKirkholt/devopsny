@@ -6,8 +6,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <h1>Test React Build!</h1>
-          <Button>KNAP</Button>
+          <div className="centered">
+              <h1>Test React Build!</h1>
+          </div>
+          <div class="centered">
+          <Button variant="contained" color="primary" align="center">Knap</Button>
+          </div>
       </header>
     </div>
   );
