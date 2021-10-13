@@ -1,0 +1,29 @@
+import React from "react";
+import {giraffestore} from "./GiraffeStore";
+import Button from "@mui/material/Button";
+import { observer } from "mobx-react-lite";
+
+
+function Giraffes () {
+
+        return (
+            <div className="Giraffes">
+                <header className="Giraffes-header">
+                    <title>Giraffes</title>
+                    <div className="centered">
+                        <Button variant="contained" color="primary" onClick={() => giraffestore.giraffes.push("Elmer")}>Tilføj
+                            giraf</Button>
+                    </div>
+                    <div class="centered">
+                        <ul>
+                            {giraffestore.giraffes.map((giraffeName,key)=>
+                                <li key={key}>{giraffeName}</li>
+                            )}
+                        </ul>
+                    </div>
+                </header>
+            </div>
+        );
+}
+
+export default observer (Giraffes);

@@ -28,6 +28,7 @@ export default function Navbar() {
                     <Button color="inherit" component={Link} to="/loging">Login</Button>
                     <Button color="inherit" component={Link} to="/about">About</Button>
                     <Button color="inherit" component={Link} to="/">Home</Button>
+                    <Button color="inherit" component={Link} to="/giraffes">Giraffer</Button>
                 </Toolbar>
             </AppBar>
         </Box>

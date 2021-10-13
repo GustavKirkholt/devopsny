@@ -13,7 +13,7 @@ render() {
                         <h1>Test React Build!</h1>
                     </div>
                     <div className="centered">
-                        <Button variant="contained" color="primary" align="center">Knap</Button>
+                        <Button variant="contained" color="primary">Knap</Button>
                     </div>
                 </header>
             </div>
