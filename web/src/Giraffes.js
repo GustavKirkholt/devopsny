@@ -10,7 +10,10 @@ function Giraffes () {
             <div className="Giraffes">
                 <header className="Giraffes-header">
                     <title>Giraffes</title>
-                    <div className="centered">
+                    <div class="centered">
+                        <h2>{giraffestore.state}</h2>
+                    </div>
+                    <div class="centered">
                         <Button variant="contained" color="primary" onClick={() => giraffestore.giraffes.push("Elmer")}>Tilføj
                             giraf</Button>
                     </div>
