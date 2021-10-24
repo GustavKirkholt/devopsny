@@ -2,8 +2,8 @@ import React from "react";
 import {Button} from "@material-ui/core";
 import { Component } from 'react';
 
-
 class Home extends Component {
+
 render() {
     return (
         <div className="Home">
