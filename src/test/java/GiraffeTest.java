@@ -6,6 +6,8 @@ import java.util.List;
 
 public class GiraffeTest {
 
+    GiraffeService g = new GiraffeService();
+    
     @Test
     void getGiraffes() {
         List<String> strings = Arrays.asList("Melman", "Elmer");
