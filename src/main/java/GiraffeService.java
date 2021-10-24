@@ -12,5 +12,4 @@ public class GiraffeService {
         return giraffes;
     }
 
-
 }
