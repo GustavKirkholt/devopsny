@@ -2,12 +2,12 @@ import React from "react";
 import {Button} from "@material-ui/core";
 import { Component } from 'react';
 
-function Home () {
-
-    return (
-        <div className="Home">
-            <header className="Home-header">
-                <title>Home </title>
+class Home extends Component {
+    render() {
+        return (
+            <div className="Home">
+                <header className="Home-header">
+                    <title>Home </title>
                     <div className="centered">
                         <h1>Test React Build!</h1>
                     </div>
@@ -17,6 +17,7 @@ function Home () {
                 </header>
             </div>
         );
+    }
 }
 
 export default Home;
