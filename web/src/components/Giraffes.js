@@ -1,5 +1,5 @@
 import React from "react";
-import {giraffestore} from "./GiraffeStore";
+import {giraffestore} from "../stores/GiraffeStore";
 import Button from "@mui/material/Button";
 import { observer } from "mobx-react-lite";
 

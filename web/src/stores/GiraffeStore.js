@@ -8,20 +8,20 @@ class GiraffeStore {
 
     constructor(props) {
         makeAutoObservable(this,{giraffes: observable},{autoBind:true});
-        this.fetchGiraffes();
+        // this.fetchGiraffes();
 
     }
 
     state = "Loading";
 
-    fetchGiraffes() {
-        fetch(baseUrl + "rest/giraffes").then(
-            (response) => response.json().then(
-                (json) => runInAction(() => this.giraffes=json)
-                    .then(this.state = "Done")
-                    .catch(this.state = "Failed")
-            )
-        )
-    }
+    //fetchGiraffes() {
+      //  fetch(baseUrl + "rest/giraffes").then(
+       //     (response) => response.json().then(
+    //        (json) => runInAction(() => this.giraffes=json)
+    //            .then(this.state = "Done")
+    //            .catch(this.state = "Failed")
+    //    )
+    //  )
+    // }
 }
 export const giraffestore = new GiraffeStore();
