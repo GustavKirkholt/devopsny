@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Giraffe {
     @Id @GeneratedValue
     @Column(name = "name")
-    private String name = "Melman";
+    private String name;
 
     public Giraffe() {
 

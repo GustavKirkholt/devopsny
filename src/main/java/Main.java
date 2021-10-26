@@ -1,4 +1,5 @@
 import org.apache.catalina.LifecycleException;
+import org.apache.catalina.User;
 import org.apache.catalina.startup.Tomcat;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -37,7 +38,7 @@ public class Main {
         String userIdSaved = null;
         try {
             tx = session.beginTransaction();
-            User u = User.builder().username("test").build();
+            User u = User.UserBuilder().username("test").build();
             userIdSaved = (String) session.save(u);
             tx.commit();
         } catch (HibernateException ex) {
