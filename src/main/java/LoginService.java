@@ -16,9 +16,8 @@ public class LoginService {
         String URI =  "https://auth.dtu.dk/dtu/?service=http://localhost:8080/rest/campusnet/redirect";
         return Response.seeOther(UriBuilder.fromUri(URI).build()).build();
     }
-
-    @Path("redirect")
     @GET
+    @Path("redirect")
     public String callback(@QueryParam("ticket") String cnTicket){
         System.out.println(cnTicket); //Check if we got something back
         //Tjek ticket mod CampusNet
