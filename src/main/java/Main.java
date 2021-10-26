@@ -1,5 +1,4 @@
 import org.apache.catalina.LifecycleException;
-import org.apache.catalina.User;
 import org.apache.catalina.startup.Tomcat;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

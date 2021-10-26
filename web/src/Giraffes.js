@@ -14,8 +14,8 @@ function Giraffes () {
                         <h2>{giraffestore.state}</h2>
                     </div>
                     <div class="centered">
-                        <Button variant="contained" color="primary" onClick={() => giraffestore.giraffes.push("Elmer")}>Tilføj
-                            giraf</Button>
+                        <Button variant="contained" color="primary" onClick={() => giraffestore.postGiraffes()}>
+                            Add Giraffe </Button>
                     </div>
                     <div class="centered">
                         <ul>
