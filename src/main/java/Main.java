@@ -38,7 +38,7 @@ public class Main {
         String userIdSaved = null;
         try {
             tx = session.beginTransaction();
-            User u = User.UserBuilder().username("test").build();
+            User u = User.builder().username("test").build();
             userIdSaved = (String) session.save(u);
             tx.commit();
         } catch (HibernateException ex) {
