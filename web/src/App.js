@@ -16,7 +16,6 @@ function App() {
                   <Route exact path='/' component={Home}/>
                   <Route path='/about' component={About}/>
                   <Route path='/giraffes' component={Giraffes}/>
-                  <Route render={()=><h1>404</h1>}/>
               </Switch>
           </HashRouter>
       </header>
