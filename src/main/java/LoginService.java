@@ -2,19 +2,23 @@ import kong.unirest.Unirest;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriBuilder;
 
+@Produces(MediaType.APPLICATION_JSON)
+@Path("login")
 public class LoginService {
     @GET
-    @Path("login")
     public Response login(){
         String URI =  "https://auth.dtu.dk/dtu/?service=http://localhost:8080/rest/campusnet/redirect";
         return Response.seeOther(UriBuilder.fromUri(URI).build()).build();
     }
 
-    @GET @Path("redirect")
+    @Path("redirect")
+    @GET
     public String callback(@QueryParam("ticket") String cnTicket){
         System.out.println(cnTicket); //Check if we got something back
         //Tjek ticket mod CampusNet
