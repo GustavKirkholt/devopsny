@@ -6,6 +6,7 @@ class GiraffeStore {
 
     giraffes = ["Loading..."];
     state = [""];
+    giraffe = 'Ny Giraf';
 
     constructor(props) {
         makeAutoObservable(this,{giraffes: observable},{autoBind:true});
@@ -14,7 +15,6 @@ class GiraffeStore {
     }
 
     state = "Loading";
-    giraffe = 'Ny Giraf';
 
     fetchGiraffes() {
         fetch(baseUrl + "rest/giraffes").then(
@@ -27,20 +27,20 @@ class GiraffeStore {
     }
 
     postGiraffes () {
-        const data = {this.giraffe}
+       const giraffe = this.giraffe
         fetch(baseUrl + "rest/giraffes", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(giraffe),
         })
             .then(response => response.json())
             .then(data => {
-                console.log('Succes', data);
+                console.log('Succes', giraffe);
             })
             .catch((error) => {
-                console.error('Error', data);
+                console.error('Error', giraffe);
             })
     }
 }
