@@ -2,18 +2,18 @@ import React, {useState} from "react"
 import './components/Search.css';
 import SearchIcon from '@material-ui/icons/Search';
 import CloseIcon from '@material-ui/icons/Close';
-import BookData from "./Data.json";
+import PatientData from "./Data.json";
 
 
 function Search() {
-    const data = BookData
+    const data = PatientData
     const [filteredData, setFilteredData] = useState([]);
     const [wordEntered, setWordEntered] = useState("");
     const handleFilter = (event) => {
         const searchWord = event.target.value
         setWordEntered(searchWord);
         const newFilter = data.filter((value) => {
-            return value.title.toLowerCase().includes(searchWord.toLowerCase());//Ændrer value.  til navn eller whatever
+            return value.navn.toLowerCase().includes(searchWord.toLowerCase());
         });
 
         if(searchWord === "") {
@@ -42,7 +42,7 @@ function Search() {
             <div className="dataResult">
                 {filteredData.slice(0,15).map((value, key) => {
                     return <a className="dataItem">
-                        <p>{value.title}, {value.pages} </p>
+                        <p>{value.navn}, {value.cpr} </p>
                     </a>
                 })}
             </div>
