@@ -19,11 +19,11 @@ public class GiraffeService {
     @GET
     @Path("query")
     public List<Giraffe> queryGiraffes(@QueryParam("name") String name) throws NotFoundException {
-        throw new NotFoundException ("No such Giraffe!");
+        throw new NotFoundException("No such Giraffe!");
     }
 
 
-    public class NotFoundException extends Exception {
+    public static class NotFoundException extends Exception {
         public NotFoundException(String s) {
             super(s);
         }
