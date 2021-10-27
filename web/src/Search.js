@@ -13,7 +13,7 @@ function Search() {
         const searchWord = event.target.value
         setWordEntered(searchWord);
         const newFilter = data.filter((value) => {
-            return value.title.toLowerCase().includes(searchWord.toLowerCase()); //Ændrer value.  til navn eller whatever
+            return value.title.toLowerCase().includes(searchWord.toLowerCase());//Ændrer value.  til navn eller whatever
         });
 
         if(searchWord === "") {
@@ -34,7 +34,7 @@ function Search() {
                        value={wordEntered}
                        onChange={handleFilter}/>
                 <div className="searchIcon">
-                    {filteredData.length === 0 ?  <SearchIcon/> :
+                    {filteredData.length === 0 && wordEntered.length === 0 ? <SearchIcon/> :
                         <CloseIcon id="clearBtn" onClick={clearInput}/> }
                 </div>
             </div>
@@ -42,7 +42,7 @@ function Search() {
             <div className="dataResult">
                 {filteredData.slice(0,15).map((value, key) => {
                     return <a className="dataItem">
-                        <p>{value.title} </p>
+                        <p>{value.title}, {value.pages} </p>
                     </a>
                 })}
             </div>
