@@ -1,15 +1,16 @@
 package com.wstutorial.rest;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@XmlRootElement
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
 public class Giraffe {
     private String name;
-
-    public Giraffe() {
-    }
-
-    public Giraffe(String name) {
-        this.name = name;
-    }
+    private double neckLength;
 }

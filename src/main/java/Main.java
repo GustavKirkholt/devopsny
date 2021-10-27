@@ -1,6 +1,5 @@
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
-
 import java.io.File;
 import java.util.Optional;
 
@@ -18,6 +17,8 @@ public class Main {
 
         tomcat.start();
         tomcat.getServer().await();
+
+
 
     }
 }
